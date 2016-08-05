@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
+//Finds all equilibrium indexes for an array. Based on the Codility problem.
 namespace CodingChallenges_CSharp.EquilibriumIndex
 {
     public class EquilibriumIndexFinder

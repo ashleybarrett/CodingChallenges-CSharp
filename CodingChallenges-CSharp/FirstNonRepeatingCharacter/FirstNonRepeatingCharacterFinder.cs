@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
+//My attempt to solve this problem: http://www.blackrabbitcoder.net/BlackRabbitCoder/archive/2015/03/09/little-puzzlers-first-non-repeating-character.aspxMy attempt to solve this problem: http://www.blackrabbitcoder.net/BlackRabbitCoder/archive/2015/03/09/little-puzzlers-first-non-repeating-character.aspx
 namespace CodingChallenges_CSharp.FirstNonRepeatingCharacter
 {
     public class FirstNonRepeatingCharacterFinder

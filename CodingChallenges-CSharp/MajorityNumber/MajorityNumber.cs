@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
+//My attempt to solve this problem: http://www.blackrabbitcoder.net/archive/2015/07/07/little-puzzlersndashthe-majority-element.aspx
 namespace CodingChallenges_CSharp.MajorityNumber
 {
     public class MajorityNumber
