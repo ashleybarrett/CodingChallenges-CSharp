@@ -1,0 +1,171 @@
+﻿using System.Collections.Generic;
+
+namespace CodingChallenges_CSharp.NumberToWordsConverter
+{
+    public static class NumberToWordsConverterTestsSource
+    {
+        public static IEnumerable<object[]> GetNumberToWordsConverterTests()
+        {
+            yield return new object[] { 1, 0, "zero" };
+            yield return new object[] { 2, 1, "one" };
+            yield return new object[] { 3, 2, "two" };
+            yield return new object[] { 4, 3, "three" };
+            yield return new object[] { 5, 4, "four" };
+            yield return new object[] { 6, 5, "five" };
+            yield return new object[] { 7, 6, "six" };
+            yield return new object[] { 8, 7, "seven" };
+            yield return new object[] { 9, 8, "eight" };
+            yield return new object[] { 10, 9, "nine" };
+            yield return new object[] { 11, 10, "ten" };
+            yield return new object[] { 12, 11, "eleven" };
+            yield return new object[] { 13, 12, "tweleve" };
+            yield return new object[] { 14, 13, "thirteen" };
+            yield return new object[] { 15, 14, "fourteen" };
+            yield return new object[] { 16, 15, "fifteen" };
+            yield return new object[] { 17, 16, "sixteen" };
+            yield return new object[] { 18, 17, "seventeen" };
+            yield return new object[] { 19, 18, "eighteen" };
+            yield return new object[] { 20, 19, "nineteen" };
+            yield return new object[] { 21, 20, "twenty" };
+            yield return new object[] { 22, 21, "twenty one" };
+            yield return new object[] { 23, 22, "twenty two" };
+            yield return new object[] { 24, 23, "twenty three" };
+            yield return new object[] { 25, 24, "twenty four" };
+            yield return new object[] { 26, 25, "twenty five" };
+            yield return new object[] { 27, 26, "twenty six" };
+            yield return new object[] { 28, 27, "twenty seven" };
+            yield return new object[] { 29, 28, "twenty eight" };
+            yield return new object[] { 30, 29, "twenty nine" };
+            yield return new object[] { 31, 30, "thirty" };
+            yield return new object[] { 32, 31, "thirty one" };
+            yield return new object[] { 33, 32, "thirty two" };
+            yield return new object[] { 34, 33, "thirty three" };
+            yield return new object[] { 35, 34, "thirty four" };
+            yield return new object[] { 36, 35, "thirty five" };
+            yield return new object[] { 37, 36, "thirty six" };
+            yield return new object[] { 38, 37, "thirty seven" };
+            yield return new object[] { 39, 38, "thirty eight" };
+            yield return new object[] { 40, 39, "thirty nine" };
+            yield return new object[] { 41, 40, "forty" };
+            yield return new object[] { 42, 41, "forty one" };
+            yield return new object[] { 43, 42, "forty two" };
+            yield return new object[] { 44, 43, "forty three" };
+            yield return new object[] { 45, 44, "forty four" };
+            yield return new object[] { 46, 45, "forty five" };
+            yield return new object[] { 47, 46, "forty six" };
+            yield return new object[] { 48, 47, "forty seven" };
+            yield return new object[] { 49, 48, "forty eight" };
+            yield return new object[] { 50, 49, "forty nine" };
+            yield return new object[] { 51, 50, "fifty" };
+            yield return new object[] { 52, 51, "fifty one" };
+            yield return new object[] { 53, 52, "fifty two" };
+            yield return new object[] { 54, 53, "fifty three" };
+            yield return new object[] { 55, 54, "fifty four" };
+            yield return new object[] { 56, 55, "fifty five" };
+            yield return new object[] { 57, 56, "fifty six" };
+            yield return new object[] { 58, 57, "fifty seven" };
+            yield return new object[] { 59, 58, "fifty eight" };
+            yield return new object[] { 60, 59, "fifty nine" };
+            yield return new object[] { 61, 60, "sixty" };
+            yield return new object[] { 62, 61, "sixty one" };
+            yield return new object[] { 63, 62, "sixty two" };
+            yield return new object[] { 64, 63, "sixty three" };
+            yield return new object[] { 65, 64, "sixty four" };
+            yield return new object[] { 66, 65, "sixty five" };
+            yield return new object[] { 67, 66, "sixty six" };
+            yield return new object[] { 68, 67, "sixty seven" };
+            yield return new object[] { 69, 68, "sixty eight" };
+            yield return new object[] { 70, 69, "sixty nine" };
+            yield return new object[] { 71, 70, "seventy" };
+            yield return new object[] { 72, 71, "seventy one" };
+            yield return new object[] { 73, 72, "seventy two" };
+            yield return new object[] { 74, 73, "seventy three" };
+            yield return new object[] { 75, 74, "seventy four" };
+            yield return new object[] { 76, 75, "seventy five" };
+            yield return new object[] { 77, 76, "seventy six" };
+            yield return new object[] { 78, 77, "seventy seven" };
+            yield return new object[] { 79, 78, "seventy eight" };
+            yield return new object[] { 80, 79, "seventy nine" };
+            yield return new object[] { 81, 80, "eighty" };
+            yield return new object[] { 82, 81, "eighty one" };
+            yield return new object[] { 83, 82, "eighty two" };
+            yield return new object[] { 84, 83, "eighty three" };
+            yield return new object[] { 85, 84, "eighty four" };
+            yield return new object[] { 86, 85, "eighty five" };
+            yield return new object[] { 87, 86, "eighty six" };
+            yield return new object[] { 88, 87, "eighty seven" };
+            yield return new object[] { 89, 88, "eighty eight" };
+            yield return new object[] { 90, 89, "eighty nine" };
+            yield return new object[] { 91, 90, "ninety" };
+            yield return new object[] { 92, 91, "ninety one" };
+            yield return new object[] { 93, 92, "ninety two" };
+            yield return new object[] { 94, 93, "ninety three" };
+            yield return new object[] { 95, 94, "ninety four" };
+            yield return new object[] { 96, 95, "ninety five" };
+            yield return new object[] { 97, 96, "ninety six" };
+            yield return new object[] { 98, 97, "ninety seven" };
+            yield return new object[] { 99, 98, "ninety eight" };
+            yield return new object[] { 100, 99, "ninety nine" };
+            yield return new object[] { 101, 100, "one hundred" };
+
+            yield return new object[] { 102, 864, "eight hundred and sixty four" };
+            yield return new object[] { 103, 358, "three hundred and fifty eight" };
+            yield return new object[] { 104, 112, "one hundred and tweleve" };
+            yield return new object[] { 105, 700, "seven hundred" };
+            yield return new object[] { 106, 999, "nine hundred and ninety nine" };
+            yield return new object[] { 107, 227, "two hundred and twenty seven" };
+            yield return new object[] { 108, 492, "four hundred and ninety two" };
+            yield return new object[] { 109, 602, "six hundred and two" };
+            yield return new object[] { 110, 313, "three hundred and thirteen" };
+            yield return new object[] { 111, 316, "three hundred and sixteen" };
+
+            yield return new object[] { 112, 1000, "one thousand" };
+            yield return new object[] { 113, 3963, "three thousand, nine hundred and sixty three" };
+            yield return new object[] { 114, 1020, "one thousand and twenty" };
+            yield return new object[] { 115, 9999, "nine thousand, nine hundred and ninety nine" };
+            yield return new object[] { 116, 4005, "four thousand and five" };
+            yield return new object[] { 117, 8007, "eight thousand and seven" };
+            yield return new object[] { 118, 9273, "nine thousand, two hundred and seventy three" };
+            yield return new object[] { 118, 6069, "six thousand and sixty nine" };
+            yield return new object[] { 120, 2481, "two thousand, four hundred and eighty one" };
+            yield return new object[] { 121, 2088, "two thousand and eighty eight" };
+
+
+            yield return new object[] { 122, 100000, "one hundred thousand" };
+            yield return new object[] { 123, 999999, "nine hundred and ninety nine thousand, nine hundred and ninety nine" };
+            yield return new object[] { 124, 768501, "seven hundred and sixty eight thousand, five hundred and one" };
+            yield return new object[] { 125, 600001, "six hundred thousand and one" };
+            yield return new object[] { 126, 549912, "five hundred and forty nine thousand, nine hundred and tweleve" };
+            yield return new object[] { 127, 981377, "nine hundred and eighty one thousand, three hundred and seventy seven" };
+            yield return new object[] { 128, 444421, "four hundred and forty four thousand, four hundred and twenty one" };
+            yield return new object[] { 129, 300002, "three hundred thousand and two" };
+            yield return new object[] { 130, 489923, "four hundred and eighty nine thousand, nine hundred and twenty three" };
+            yield return new object[] { 131, 123098, "one hundred and twenty three thousand and ninety eight" };
+
+            yield return new object[] { 132, 1000000, "one million" };
+            yield return new object[] { 133, 3999999, "three million, nine hundred and ninety nine thousand, nine hundred and ninety nine" };
+            yield return new object[] { 134, 21768501, "twenty one million, seven hundred and sixty eight thousand, five hundred and one" };
+            yield return new object[] { 135, 900000001, "nine hundred million and one" };
+            yield return new object[] { 136, 900000113, "nine hundred million, one hundred and thirteen" };
+            yield return new object[] { 137, 222981377, "two hundred and twenty two million, nine hundred and eighty one thousand, three hundred and seventy seven" };
+            yield return new object[] { 138, 8444421, "eight million, four hundred and forty four thousand, four hundred and twenty one" };
+            yield return new object[] { 139, 609300002, "six hundred and nine million, three hundred thousand and two" };
+            yield return new object[] { 140, 1489923, "one million, four hundred and eighty nine thousand, nine hundred and twenty three" };
+            yield return new object[] { 141, 712123098, "seven hundred and tweleve million, one hundred and twenty three thousand and ninety eight" };
+            yield return new object[] { 142, 999999999, "nine hundred and ninety nine million, nine hundred and ninety nine thousand, nine hundred and ninety nine" };
+            yield return new object[] { 143, 1000000000, "one billion" };
+            yield return new object[] { 144, 999999999999, "nine hundred and ninety nine billion, nine hundred and ninety nine million, nine hundred and ninety nine thousand, nine hundred and ninety nine" };
+            yield return new object[] { 145, 1000000000000, "one trillion" };
+            yield return new object[] { 146, 999999999999999, "nine hundred and ninety nine trillion, nine hundred and ninety nine billion, nine hundred and ninety nine million, nine hundred and ninety nine thousand, nine hundred and ninety nine" };
+
+            yield return new object[] { 144, -0, "zero" };
+            yield return new object[] { 145, -79, "negative seventy nine" };
+            yield return new object[] { 146, -864, "negative eight hundred and sixty four" };
+            yield return new object[] { 147, -1000, "negative one thousand" };
+            yield return new object[] { 148, -100000, "negative one hundred thousand" };
+            yield return new object[] { 149, -3999999, "negative three million, nine hundred and ninety nine thousand, nine hundred and ninety nine" };
+            yield return new object[] { 150, -999999999, "negative nine hundred and ninety nine million, nine hundred and ninety nine thousand, nine hundred and ninety nine" };
+            yield return new object[] { 151, -1000000000, "negative one billion" };
+        }
+    }
+}
