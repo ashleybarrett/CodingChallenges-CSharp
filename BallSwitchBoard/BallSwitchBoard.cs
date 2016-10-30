@@ -14,7 +14,7 @@ namespace codingChallenges_CSharp.BallSwitchBoard
                 for (int i = 0; i < K; i++)
                 {
                     //Balls always start at 0,0
-                    if (DoesLeaveByBottomRight(ref A, 0, 0, BallSwitchBoardEntryType.Top))
+                    if (DoesLeaveByBottomRight(ref A, 0, 0, true))
                     {
                         result++;
                     }
@@ -24,14 +24,16 @@ namespace codingChallenges_CSharp.BallSwitchBoard
             return result;
         }
 
-        private bool DoesLeaveByBottomRight(ref int[][] array, int row, int column, BallSwitchBoardEntryType enteredFrom)
+        private bool DoesLeaveByBottomRight(ref int[][] array, int row, int column, bool enteredFromTop)
         {
             var doesLeaveByBottomRight = false;
 
-            var current = array[row][column]; 
+            const int directionTop = -1, directionRight = 1;
+
+            var current = array[row][column];
 
             //Leave via the bottom edge    
-            if ((current == 0 && enteredFrom == BallSwitchBoardEntryType.Top) || current == (int)BallSwitchBoardEntryType.Top)
+            if ((current == 0 && enteredFromTop) || current == directionTop)
             {
                 if (row == (array.Length - 1))
                 {
@@ -42,8 +44,12 @@ namespace codingChallenges_CSharp.BallSwitchBoard
                 }
                 else
                 {
-                    current = (int)BallSwitchBoardEntryType.Right;
-                    doesLeaveByBottomRight = DoesLeaveByBottomRight(ref array, row++, column, BallSwitchBoardEntryType.Top);
+                    if(current != 0)
+                    {
+                        array[row][column] = directionRight;
+                    }
+
+                    doesLeaveByBottomRight = DoesLeaveByBottomRight(ref array, row + 1, column, true);
                 }
             }
             //Leave via the right edge
@@ -51,8 +57,12 @@ namespace codingChallenges_CSharp.BallSwitchBoard
             {
                 if (column != (array[0].Length - 1))
                 {
-                    current = (int)BallSwitchBoardEntryType.Top;
-                    doesLeaveByBottomRight = DoesLeaveByBottomRight(ref array, row, column++, BallSwitchBoardEntryType.Right);
+                    if(current != 0)
+                    {
+                        array[row][column] = directionTop;
+                    }
+
+                    doesLeaveByBottomRight = DoesLeaveByBottomRight(ref array, row, column + 1, false);
                 }
             }
 
