@@ -7,17 +7,11 @@ namespace CodingChallenges_CSharp
     {
         public static void Main(string[] args)
         {
-            int[][] x = new int[2][];
-            x[0] = new int[3];
-            x[1] = new int[3];
+            int[][] x = new int[1][];
+            x[0] = new int[1];
 
             x[0][0] = -1;    
-            x[0][1] =  0;   
-            x[0][2] = -1;
-            x[1][0] =  1;
-            x[1][1] =  0;   
-            x[1][2] =  0;
-            new BallSwitchBoardTests().RunTests(0, x, 4, 1);
+            new BallSwitchBoardTests().RunTests(0, x, 42, 21);
         }
     }
 }

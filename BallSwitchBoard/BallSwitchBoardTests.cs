@@ -61,6 +61,21 @@ namespace codingChallenges_CSharp.BallSwitchBoard
                 4, 
                 1
             };   
+
+            yield return new object[] 
+            {
+                4,  
+                SetUpArray(
+                    1, 1,
+                    (x) => 
+                    {
+                        x[0][0] = -1;    
+                        return x;
+                    }
+                ),
+                42, 
+                21
+            };   
         }
 
         private static int[][] SetUpArray(int rows, int columns, Func<int[][], int[][]> func)
