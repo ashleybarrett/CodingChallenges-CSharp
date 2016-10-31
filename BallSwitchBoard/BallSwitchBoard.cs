@@ -1,4 +1,4 @@
-//My attempt to solve this problem: https://codility.com/programmers/task/ball_switch_board/
+//My attempt to solve this problem: Zeta 2011 -https://codility.com/programmers/task/ball_switch_board/
 namespace codingChallenges_CSharp.BallSwitchBoard
 {
     public class BallSwitchBoard
