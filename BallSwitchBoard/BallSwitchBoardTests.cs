@@ -75,6 +75,36 @@ namespace codingChallenges_CSharp.BallSwitchBoard
                 ),
                 42, 
                 21
+            }; 
+
+            yield return new object[] 
+            {
+                5,  
+                SetUpArray(
+                    1, 1,
+                    (x) => 
+                    {
+                        x[0][0] = -1;    
+                        return x;
+                    }
+                ),
+                41, 
+                21
+            };  
+
+            yield return new object[] 
+            {
+                6,  
+                SetUpArray(
+                    1, 1,
+                    (x) => 
+                    {
+                        x[0][0] = 1;    
+                        return x;
+                    }
+                ),
+                41, 
+                20
             };   
         }
 

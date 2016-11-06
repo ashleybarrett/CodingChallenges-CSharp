@@ -6,45 +6,54 @@ namespace codingChallenges_CSharp.BallSwitchBoard
         public int solution(int[][] A, int K)
         {
             var result = 0;
-            
+    
             if (A.Length > 0 && K > 0)
             {
-                int maxRows = A.Length - 1, maxColumns = A[0].Length - 1;
-
-                for (int i = 0; i < K; i++)
+                int totalRows = A.Length, totalColumns = A[0].Length;
+                int[,] ballsLeavingBottom = new int[totalRows, totalColumns], ballsLeavingRight = new int[totalRows, totalColumns];
+                
+                for (int row = 0; row < totalRows; row++)
                 {
-                    //Balls always start at 0,0
-                    if (DoesLeaveByBottomRight(ref A, 0, 0, maxRows, maxColumns, true))
+                    for (int column = 0; column < totalColumns; column++)
                     {
-                        result++;
+                        int enteringFromTop = 0, enteringFromLeft = 0;
+
+                        if (row == 0 && column == 0)
+                        {
+                            enteringFromTop = K;
+                        }
+
+                        if (row > 0)
+                        {
+                            enteringFromTop = ballsLeavingBottom[row - 1, column];
+                        }
+
+                        if (column > 0)
+                        {
+                            enteringFromLeft = ballsLeavingRight[row, column - 1];
+                        }
+
+                        var value = A[row][column];
+
+                        if (value == 0)
+                        {
+                            ballsLeavingBottom[row, column] = enteringFromTop;
+                            ballsLeavingRight[row, column] = enteringFromLeft;
+                        }
+                        else
+                        {
+                            var total = (enteringFromLeft + enteringFromTop);
+                            var remainder = total % 2;
+                            ballsLeavingBottom[row, column] = (total / 2) + (value == -1 ? remainder : 0);
+                            ballsLeavingRight[row, column] = (total / 2)  + (value == 1 ? remainder : 0);
+                        }
                     }
                 }
+
+                result = ballsLeavingBottom[totalRows - 1, totalColumns - 1];
             }
 
             return result;
-        }
-
-        private bool DoesLeaveByBottomRight(ref int[][] array, int row, int column, int maxRows, int maxColumns, bool enteredFromTop)
-        {
-            var doesLeaveByBottomRight = false;
-
-            var current = array[row][column];
-            var nextEntryFromTop = (current == 0 && enteredFromTop) || current == -1;
-            var nextRow = nextEntryFromTop ? row + 1 : row;
-            var nextColumn = nextEntryFromTop ? column : column + 1;
-
-            array[row][column] = array[row][column] * -1;
-
-            if ((row) == maxRows && (column) == maxColumns && nextEntryFromTop)
-            {
-                doesLeaveByBottomRight = true;
-            }
-            else if (nextRow <= maxRows && nextColumn <= maxColumns)
-            {
-                doesLeaveByBottomRight = DoesLeaveByBottomRight(ref array, nextRow, nextColumn, maxRows, maxColumns, nextEntryFromTop);
-            }
-
-            return doesLeaveByBottomRight;
         }
     }
 }
