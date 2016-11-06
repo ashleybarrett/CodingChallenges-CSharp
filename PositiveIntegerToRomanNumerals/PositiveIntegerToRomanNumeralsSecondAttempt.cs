@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
+//My attempt to solve this problem: http://www.blackrabbitcoder.net/archive/2015/05/05/little-puzzlersndashpositive-integer-to-roman-numerals.aspx
 namespace CodingChallenges_CSharp.PositiveIntegerToRomanNumerals
 {
     public class PositiveIntegerToRomanNumeralsSecondAttempt : IPositiveIntegerToRomanNumerals
