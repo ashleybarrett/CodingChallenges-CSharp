@@ -1,13 +1,16 @@
 ﻿using System;
-using codingChallenges_CSharp.BallSwitchBoard;
+using System.Reflection;
+using NUnit.Common;
+using NUnitLite;
 
-namespace CodingChallenges_CSharp
+namespace coding_challenges_csharp
 {
-    public class Program
+    class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
-            
+            new AutoRun(typeof(Program).GetTypeInfo().Assembly)
+                .Execute(args, new ExtendedTextWrapper(Console.Out), Console.In);
         }
     }
 }
