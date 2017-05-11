@@ -6,7 +6,6 @@
   <ItemGroup>
     <PackageReference Include="NUnit" Version="*" />
     <PackageReference Include="microsoft.testplatform.testhost" Version="*" />
-    <PackageReference Include="dotnet-test-nunit" Version="*" />
     <PackageReference Include="NUnitLite" Version="*" />
   </ItemGroup>
 </Project>
